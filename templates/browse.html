@@ -1,18 +1,14 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Goodreads | Meet your next favorite book</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
-        <h1>Browse our Books!</h1>
-        <hr>
-        <div>
-            <ul>
-                <li><a href="/basketball">Basketball Books</a></li>
-                <li><a href="/football">Football Books</a></li>
-                <li><a href="/baseball">Baseball Books</a></li>
-            </ul>
-        </div>
-    </body>
-</html>
+{% extends "base.html" %}
+{% block title %}Browse Books{% endblock %}
+{% block head %}
+    {{ super() }}
+{% endblock head %}
+
+{% block content %}
+    <h3>Browse our books!</h3>
+    <ul>
+        <li><a href="/genre/sportsfiction">Sports Fiction</a></li>
+        <li><a href="/genre/scifi">Science Fiction</a></li>
+        <li><a href="/genre/mystery">Mystery</a></li>
+    </ul>
+{% endblock content %}

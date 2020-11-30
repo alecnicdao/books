@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block title %} {{ genre }} {% endblock title %}
+{% block head %}
+    {{ super() }}
+{% endblock head %}
+
+{% block content %}
+    <h3> {{ genre }} </h3>
+    <p> {{ genreDesc }} </p>
+
+    <h4>Trending {{ genre }}</h4>
+    <ul>
+        {% for book in books %}
+            <li><a href="/books/{{ book.route }}"> {{ book.title }} </a></li>
+        {% endfor %}
+    </ul>
+{% endblock content %}
