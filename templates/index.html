@@ -1,23 +1,15 @@
 {% extends 'base.html' %}
-{% block title %} Goodreads: {% endblock title %}
-{% block head %}
-    {{ super() }}
-{% endblock head %}
 
 {% block content %}
-<section>
-    <h3>Deciding what to read next?</h3>
-    <p>Then you are in the right place. What ever titles and genres you might be into, we've got lots to choose from here.</p>
-    <p><a href="/browse">Click here for the latest titles</a></p>
-</section>
 
-<section>
-    <h3>What are your friends reading?</h3>
-    <p>Your friends might be using Books! to discuss their favorite books right now!</p>
-</section>
+    <h1 class="is-size-1">Welcome to BookDB</h1>
 
-<section>
-    <h3>Are you an author or a publisher?</h3>
-    <p>Books! is the perfect place to launch your new title, and reach many book lovers!</p>
-</section>
-{% endblock content %}
+    <p>Books</p>
+    <ul>
+        {% for book in books %}
+          <li>{{ book.name }}</li>
+        {% endfor %}
+    </ul>
+
+
+{% endblock %}
